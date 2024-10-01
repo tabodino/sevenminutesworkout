@@ -1,0 +1,112 @@
+# Android-specific files
+.gradle/
+.idea/
+local.properties
+.DS_Store
+*.iml
+*.hprof
+*.log
+*.lock
+*.gz
+*.orig
+*.pyc
+*.tmp
+*.temp
+*.swp
+*.swo
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore Android Studio project files
+/.idea
+/.gradle
+/captures/
+/build
+/output.json
+
+# Gradle files
+.gradle/
+/build/
+/local.properties
+/.gradletasknamecache
+/.gradleprojectmetadata
+/.gradle_lockfile
+
+# Gradle wrapper files
+/gradle/wrapper/gradle-wrapper.properties
+/gradle/wrapper/gradle-wrapper.jar
+
+# Sign-in key files
+*.jks
+*.keystore
+
+# Ignore Kotlin/Java binaries
+*.class
+*.dex
+*.jar
+*.apk
+*.ap_
+*.o
+*.obj
+*.so
+*.exe
+*.dll
+*.pdb
+*.a
+*.bin
+
+# Ignore log, temp & system files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.lock
+
+# Android Studio generated files
+/.cxx
+/.idea/caches/
+/.idea/libraries/
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/gradle.xml
+/.idea/dictionaries/
+/.idea/copyright/
+/.idea/vcs.xml
+/.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/codeStyles/
+
+# Ignore generated binding files
+**/build/generated/
+/build/intermediates/
+/build/dependency-cache/
+/build/outputs/
+/build/kotlin/
+
+# JetBrains IDEs
+*.iws
+*.ipr
+*.iml
+.idea/
+
+# IntelliJ IDEA artifacts and libraries
+out/
+.idea/libraries/
+
+# Miscellaneous
+*.log
+*.orig
+*.pyc
+*.swo
+*.sublime-workspace
+
+# Mac OS files
+.DS_Store
+
