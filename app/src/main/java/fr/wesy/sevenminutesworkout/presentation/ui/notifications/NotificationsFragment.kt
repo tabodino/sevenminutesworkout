@@ -1,4 +1,4 @@
-package fr.wesy.sevenminutesworkout.ui.notifications
+package fr.wesy.sevenminutesworkout.presentation.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater
