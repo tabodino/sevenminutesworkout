@@ -1,5 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "2.0.0"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        def dagger_version = "2.52"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.tools.build:gradle:8.1.2"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
+    }
+}
 plugins {
-alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
 }
