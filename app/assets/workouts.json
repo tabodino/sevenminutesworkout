@@ -1,0 +1,115 @@
+[
+   {
+      "title":"Full Body Workout",
+      "description":"A complete workout targeting all major muscle groups.",
+      "level": "beginner",
+      "exercises":[
+         {
+            "title":"Jumping jacks",
+            "description":"Stand with feet together and arms at your sides. Jump while spreading legs to the sides and raising arms above the head. Return to starting position and repeat.",
+            "duration":60
+         },
+         {
+            "title":"Push-ups",
+            "description":"In plank position, hands shoulder-width apart. Lower your body towards the floor by bending elbows, then push back up to starting position.",
+            "duration":60
+         },
+         {
+            "title":"Squats",
+            "description":"Stand with feet shoulder-width apart. Bend knees to lower your body as if sitting on a chair, then return to standing position.",
+            "duration":60
+         },
+         {
+            "title":"Plank",
+            "description":"In plank position on forearms, keep body in a straight line from heels to head by engaging core muscles.",
+            "duration":60
+         },
+         {
+            "title":"Alternating Lunges",
+            "description":"Stand, step one foot forward into a lunge, bending both knees. Return to standing and repeat on the other side.",
+            "duration":60
+         },
+         {
+            "title":"Crunches",
+            "description":"Lie on your back with knees bent and feet flat on the floor. Place hands behind your head. Contract your abs to lift your shoulders off the floor, then return to starting position.",
+            "duration":60
+         }
+      ]
+   }
+,
+   {
+      "title":"Express Cardio Workout",
+      "description":"A quick cardio workout to get your heart pumping.",
+      "level": "intermediate",
+      "exercises":[
+         {
+            "title":"Mountain climbers",
+            "description":"In plank position, alternate bringing one knee towards your chest while keeping body in a straight line.",
+            "duration":60
+         },
+         {
+            "title":"Burpees",
+            "description":"Start standing, then squat down to place hands on the floor, jump feet back into plank position, do a push-up, jump feet back towards hands, then jump up vertically.",
+            "duration":60
+         },
+         {
+            "title":"Squat jumps",
+            "description":"Stand with feet shoulder-width apart, squat down, then jump up explosively while extending legs. Land softly and repeat.",
+            "duration":60
+         },
+         {
+            "title":"Scissors",
+            "description":"Lie on your back with legs raised about 45 degrees off the floor. Alternate crossing legs like scissors while engaging core muscles.",
+            "duration":60
+         },
+         {
+            "title":"High knees",
+            "description":"Stand and quickly alternate lifting one knee towards your chest, keeping a dynamic pace.",
+            "duration":60
+         },
+         {
+            "title":"Star jumps",
+            "description":"Stand with feet together, then jump explosively while spreading arms and legs outwards to form a star shape. Return to starting position.",
+            "duration":60
+         }
+      ]
+   }
+,
+   {
+      "title":"Intense Strength Training",
+      "description":"An intense workout focusing on building strength and endurance.",
+      "level": "advanced",
+      "exercises":[
+         {
+            "title":"Push-ups",
+            "description":"In plank position, hands shoulder-width apart, lower your body towards the floor by bending elbows, then push back up to starting position.",
+            "duration":60
+         },
+         {
+            "title":"Jumping lunges",
+            "description":"Stand, step one foot forward into a lunge, then explosively jump up and switch legs in mid-air, landing softly into a lunge on the other side.",
+            "duration":60
+         },
+         {
+            "title":"Diamond push-ups",
+            "description":"In plank position, bring hands close together to form a diamond shape with thumbs and index fingers. Perform a push-up by bending elbows and pushing back up.",
+            "duration":60
+         },
+         {
+            "title":"Jump squats",
+            "description":"Stand with feet shoulder-width apart, squat down, then jump up explosively while extending legs. Land softly and repeat.",
+            "duration":60
+         },
+         {
+            "title":"Plank with rotation",
+            "description":"In plank position on hands, keep body in a straight line from heels to head. Rotate body to one side then return to plank position and repeat on the other side.",
+            "duration":60
+         },
+         {
+            "title":"Oblique crunches",
+            "description":"Lie on your back with knees bent and feet flat on the floor. Place one hand behind your head and bring opposite elbow towards opposite knee while engaging core muscles. Repeat on the other side.",
+            "duration":60
+         }
+      ]
+   }
+]
