@@ -8,10 +8,13 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#E60023</color>
-    <!-- Test pastel color for bg cards-->
+    <!-- Pastel color for bg cards -->
     <color name="pastel_blue">#bae1ff</color>
     <color name="pastel_green">#baffc9</color>
     <color name="pastel_yellow">#ffffba</color>
     <color name="pastel_orange">#ffdfba</color>
-    <color name="pastel_red">#ffb3ba</color>
+    <color name="pastel_pink">#ECDEFC</color>
+    <color name="pastel_greenlight">#E7FBBC</color>
+
+    <color name="default_text_color">#484847</color>
 </resources>

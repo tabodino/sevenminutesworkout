@@ -2,7 +2,9 @@
    {
       "title":"Full Body Workout",
       "description":"A complete workout targeting all major muscle groups.",
-      "level": "beginner",
+      "level": "Beginner",
+      "imageUrl": "https://i.ibb.co/wMJS6SB/workout1.png",
+      "bgColor": "#D6EBEB",
       "exercises":[
          {
             "title":"Jumping jacks",
@@ -40,7 +42,9 @@
    {
       "title":"Express Cardio Workout",
       "description":"A quick cardio workout to get your heart pumping.",
-      "level": "intermediate",
+      "level": "Intermediate",
+      "imageUrl": "https://i.ibb.co/hW8xGPz/workout5.png",
+      "bgColor": "#ECDEFC",
       "exercises":[
          {
             "title":"Mountain climbers",
@@ -78,7 +82,9 @@
    {
       "title":"Intense Strength Training",
       "description":"An intense workout focusing on building strength and endurance.",
-      "level": "advanced",
+      "level": "Advanced",
+      "imageUrl": "https://i.ibb.co/Lpv601B/workout6.png",
+      "bgColor": "#E7FBBC",
       "exercises":[
          {
             "title":"Push-ups",

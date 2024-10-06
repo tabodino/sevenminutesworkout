@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="fr.wesy.sevenminutesworkout.presentation.ui.home.HomeFragment"
+        android:name="fr.wesy.sevenminutesworkout.presentation.ui.workout.WorkoutFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_workout" />
 
     <fragment
         android:id="@+id/navigation_dashboard"

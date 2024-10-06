@@ -20,12 +20,12 @@ class SplashScreenActivity : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //val logo = findViewById<ImageView>(R.id.splashLogo)
+        val tvSeven = binding.sevenTxt
         val fadeIn = AlphaAnimation(0.0f, 1.0f).apply {
             duration = 2000
             fillAfter = true
         }
-       // logo.startAnimation(fadeIn)
+        tvSeven.startAnimation(fadeIn)
 
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))

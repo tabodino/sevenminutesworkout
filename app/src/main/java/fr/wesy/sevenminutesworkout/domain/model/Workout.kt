@@ -4,5 +4,6 @@ data class Workout(
     val title: String,
     val description: String,
     val level: String,
-    val imageUrl: String
+    val imageUrl: String,
+    val bgColor: String
 )

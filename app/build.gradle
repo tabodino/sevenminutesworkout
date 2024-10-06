@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -54,7 +57,12 @@ dependencies {
     implementation libs.gson
 
     // Hilt
+    def hilt_version= "2.52"
     implementation libs.hilt.android
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // Glide
+    implementation libs.glide
 
     // Testing
     testImplementation libs.junit

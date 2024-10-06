@@ -3,4 +3,16 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="workout1">https://i.ibb.co/wMJS6SB/workout1.png</string>
+    <string name="workout2">https://i.ibb.co/W3v1v8j/workout2.png</string>
+    <string name="workout3">https://i.ibb.co/RcCF3Pp/workout3.png</string>
+    <string name="workout5">https://i.ibb.co/hW8xGPz/workout5.png</string>
+    <string name="workout6">https://i.ibb.co/Lpv601B/workout6.png</string>
+
+    <string name="let_s_start_training">Let\'s start training !</string>
+    <string name="workout_title">Workout Title</string>
+    <string name="workout_image">Workout image</string>
+    <string name="workout_beginner_level">Beginner level</string>
+
 </resources>
