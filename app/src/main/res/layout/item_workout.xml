@@ -67,7 +67,7 @@
                     android:id="@+id/tvWorkoutLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/workout_beginner_level"
+                    tools:text="Beginner level"
                     android:fontFamily="@font/roboto_light"
                     android:textSize="20sp"
                     android:paddingStart="16dp"

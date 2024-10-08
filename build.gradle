@@ -8,8 +8,9 @@ buildscript {
     dependencies {
         def dagger_version = "2.52"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "com.android.tools.build:gradle:8.1.2"
+        classpath libs.gradle
         classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_version"
+        classpath libs.androidx.navigation.safe.args.gradle.plugin
     }
 }
 plugins {

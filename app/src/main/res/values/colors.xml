@@ -17,4 +17,6 @@
     <color name="pastel_greenlight">#E7FBBC</color>
 
     <color name="default_text_color">#484847</color>
+    <color name="blacklight">#282B2C</color>
+    <color name="overlay">#90000000</color>
 </resources>

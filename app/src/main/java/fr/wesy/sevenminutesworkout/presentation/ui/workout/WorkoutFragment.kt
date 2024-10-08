@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,7 +38,11 @@ class WorkoutFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(context)
 
         workoutViewModel.workouts.observe(viewLifecycleOwner) { workouts ->
-            workoutAdapter = WorkoutAdapter(workouts)
+            workoutAdapter = WorkoutAdapter(workouts) { selectedWorkout ->
+                val action = WorkoutFragmentDirections
+                    .actionWorkoutFragmentToWorkoutDetailFragment(selectedWorkout)
+                findNavController().navigate(action)
+            }
             recyclerView.adapter = workoutAdapter
         }
     }

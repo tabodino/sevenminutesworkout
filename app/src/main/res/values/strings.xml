@@ -13,6 +13,8 @@
     <string name="let_s_start_training">Let\'s start training !</string>
     <string name="workout_title">Workout Title</string>
     <string name="workout_image">Workout image</string>
-    <string name="workout_beginner_level">Beginner level</string>
+    <string name="workout_level">%1$s level</string>
+    <string name="back">Back</string>
+    <string name="start_training">Start training !</string>
 
 </resources>

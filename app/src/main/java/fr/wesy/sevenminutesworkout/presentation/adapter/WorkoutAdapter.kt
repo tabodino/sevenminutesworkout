@@ -1,37 +1,31 @@
 package fr.wesy.sevenminutesworkout.presentation.adapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import fr.wesy.sevenminutesworkout.R
 import fr.wesy.sevenminutesworkout.databinding.ItemWorkoutBinding
 import fr.wesy.sevenminutesworkout.domain.model.Workout
+import fr.wesy.sevenminutesworkout.util.ColorUtil
+import fr.wesy.sevenminutesworkout.util.ImageLoader
 
-class WorkoutAdapter(private val workouts: List<Workout>)
-    : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>() {
+class WorkoutAdapter(
+    private val workouts: List<Workout>,
+    private val onItemClick: (Workout) -> Unit
+) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>() {
 
     inner class WorkoutViewHolder(
         private val binding: ItemWorkoutBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(workout: Workout) {
             binding.tvWorkoutTitle.text = workout.title
-            binding.tvWorkoutLevel.text = "${workout.level} level"
-            // TODO Refactor this part
-            Glide.with(binding.root.context)
-                .load(workout.imageUrl)
-                //.placeholder(R.drawable.placeholder)
-                //.error(R.drawable.error)
-                .into(binding.ivWorkoutImage)
+            binding.tvWorkoutLevel.text = binding.root.context.getString(
+                R.string.workout_level, workout.level
+            )
 
-            val colorHex = workout.bgColor
+            ImageLoader.loadUrlImage(binding.ivWorkoutImage, workout.imageUrl)
 
-            try {
-                val colorInt = Color.parseColor(colorHex)
-                binding.layoutWorkout.setBackgroundColor(colorInt)
-            } catch (e: IllegalArgumentException) {
-                e.printStackTrace()
-            }
+            ColorUtil.applyBackgroundColor(binding.layoutWorkout, workout.bgColor)
         }
     }
 
@@ -42,7 +36,11 @@ class WorkoutAdapter(private val workouts: List<Workout>)
     }
 
     override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
-        holder.bind(workouts[position])
+        val workout = workouts[position]
+        holder.bind(workout)
+        holder.itemView.setOnClickListener {
+            onItemClick(workout)
+        }
     }
 
     override fun getItemCount(): Int = workouts.size

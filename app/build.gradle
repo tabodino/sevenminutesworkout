@@ -4,7 +4,10 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
 }
+
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
     namespace 'fr.wesy.sevenminutesworkout'
@@ -55,6 +58,8 @@ dependencies {
 
     // Gson
     implementation libs.gson
+    implementation libs.androidx.legacy.support.v4
+    implementation libs.androidx.fragment.ktx
 
     // Hilt
     def hilt_version= "2.52"
