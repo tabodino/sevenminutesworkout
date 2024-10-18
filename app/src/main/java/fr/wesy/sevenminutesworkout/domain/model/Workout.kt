@@ -9,5 +9,6 @@ data class Workout(
     val description: String,
     val level: String,
     val imageUrl: String,
-    val bgColor: String
+    val bgColor: String,
+    val exercises: List<Exercise>
 ) : Parcelable

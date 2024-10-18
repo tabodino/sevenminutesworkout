@@ -1,20 +1,27 @@
 <resources>
     <string name="app_name">Seven Minutes Workout</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_exercises">Exercises</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="workout1">https://i.ibb.co/wMJS6SB/workout1.png</string>
-    <string name="workout2">https://i.ibb.co/W3v1v8j/workout2.png</string>
-    <string name="workout3">https://i.ibb.co/RcCF3Pp/workout3.png</string>
-    <string name="workout5">https://i.ibb.co/hW8xGPz/workout5.png</string>
-    <string name="workout6">https://i.ibb.co/Lpv601B/workout6.png</string>
-
     <string name="let_s_start_training">Let\'s start training !</string>
+    <string name="rest_for_n_seconds">Rest for %1s seconds</string>
+
     <string name="workout_title">Workout Title</string>
     <string name="workout_image">Workout image</string>
     <string name="workout_level">%1$s level</string>
     <string name="back">Back</string>
     <string name="start_training">Start training !</string>
+    <string name="next">Next</string>
+    <string name="previous">Prev</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="exit_workout">Exit Workout?</string>
+    <string name="confirm_exit">Are you sure you want to exit ?</string>
+    <string name="pause_resume">Pause / Resume</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="finish">Finish</string>
+    <string name="you_did_it">You did it !</string>
+    <string name="image_award">Image award</string>
 
 </resources>

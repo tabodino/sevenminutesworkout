@@ -12,6 +12,7 @@ import fr.wesy.sevenminutesworkout.databinding.FragmentWorkoutDetailBinding
 import fr.wesy.sevenminutesworkout.presentation.ui.MainActivity
 import fr.wesy.sevenminutesworkout.util.ColorUtil
 import fr.wesy.sevenminutesworkout.util.ImageLoader
+import androidx.navigation.fragment.findNavController
 
 @AndroidEntryPoint
 class WorkoutDetailFragment : Fragment() {
@@ -42,6 +43,12 @@ class WorkoutDetailFragment : Fragment() {
         binding.tvWorkoutDescription.text = selectedWorkout.description
         binding.tvWorkoutLevel.text = getString(R.string.workout_level, selectedWorkout.level)
 
+        binding.btnStart.setOnClickListener {
+            val action = WorkoutDetailFragmentDirections
+                .actionWorkoutDetailFragmentToWorkoutExerciseFragment(selectedWorkout)
+            findNavController().navigate(action)
+        }
+
         handleBackPressed()
 
         (activity as MainActivity).hideBottomNavigationView()
@@ -51,7 +58,11 @@ class WorkoutDetailFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        (activity as MainActivity).showBottomNavigationView()
+
+        val navController = findNavController()
+        if (navController.currentDestination?.id != R.id.navigation_workout_exercise) {
+            (activity as MainActivity).showBottomNavigationView()
+        }
     }
 
     private fun handleBackPressed() {

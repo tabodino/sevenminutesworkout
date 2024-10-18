@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Couleur du texte quand le bouton est désactivé -->
+    <item android:color="@android:color/transparent" android:state_enabled="false"/>
+    <!-- Couleur du texte quand le bouton est pressé -->
+    <item android:color="@color/colorPressed" android:state_pressed="true"/>
+    <!-- Couleur du texte par défaut quand le bouton est activé -->
+    <item android:color="@color/blacklight" android:state_enabled="true"/>
+</selector>

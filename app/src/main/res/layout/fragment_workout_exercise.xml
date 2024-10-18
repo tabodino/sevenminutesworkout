@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.workout.WorkoutDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutWorkoutDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/ivWorkoutImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/workout_image"
+                    android:src="@drawable/workout1"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:id="@+id/ivBackArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/back"
+                    android:src="@drawable/ic_back_arrow_24dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvWorkoutDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    tools:text="A complete workout"
+                    android:shadowRadius="4"
+                    android:shadowColor="@color/default_text_color"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="150dp"
+                    android:textSize="38sp"
+                    android:padding="16dp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="16dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/card_background2"
+                        android:elevation="16dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:id="@+id/tvExerciseTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_medium"
+                            tools:text="Push ups"
+                            android:textColor="@color/default_text_color"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:textSize="24sp" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarCircle"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/drawable_circle_dark_color"
+                            android:indeterminate="false"
+                            android:max="60"
+                            android:progress="10"
+                            android:progressDrawable="@drawable/drawable_circle_color"
+                            android:rotation="-90"
+                            app:layout_constraintBottom_toTopOf="@+id/btnPause"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
+
+                        <TextView
+                            android:id="@+id/tvTimer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="00:00"
+                            android:textSize="48sp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@color/default_text_color"
+                            app:layout_constraintBottom_toTopOf="@+id/btnPause"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tvExerciseTitle" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnPrevious"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cornerRadius="16dp"
+                            app:strokeColor="@color/blacklight"
+                            android:textColor="@color/button_text_color"
+                            android:background="@drawable/button_state_background"
+                            android:text="@string/previous"
+                            android:layout_marginBottom="42dp"
+                            android:layout_marginStart="32dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btnPause"
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/ic_pause_48dp"
+                            android:backgroundTint="@color/blacklight"
+                            app:tint="@color/white"
+                            android:padding="16dp"
+                            android:contentDescription="@string/pause_resume"
+                            android:scaleType="centerInside"
+                            android:layout_marginBottom="32dp"
+                            android:background="@drawable/rounded_button_background"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+                            app:layout_constraintEnd_toStartOf="@+id/btnNext" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnNext"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cornerRadius="16dp"
+                            android:text="@string/next"
+                            android:background="@drawable/button_state_background"
+                            android:layout_marginBottom="42dp"
+                            android:layout_marginEnd="32dp"
+                            android:textColor="@color/blacklight"
+                            app:strokeColor="@color/blacklight"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Drawable quand le bouton est désactivé -->
+    <item android:drawable="@drawable/bg_button_disabled" android:state_enabled="false"/>
+    <!-- Drawable quand le bouton est pressé -->
+    <item android:drawable="@drawable/bg_button_pressed" android:state_pressed="true"/>
+    <!-- Drawable par défaut quand le bouton est activé -->
+    <item android:drawable="@drawable/rounded_button_background" android:state_enabled="true"/>
+</selector>

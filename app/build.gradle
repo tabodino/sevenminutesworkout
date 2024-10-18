@@ -69,6 +69,10 @@ dependencies {
     // Glide
     implementation libs.glide
 
+    // UI Components
+    implementation libs.material.v170
+    implementation libs.konfetti.xml
+
     // Testing
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
