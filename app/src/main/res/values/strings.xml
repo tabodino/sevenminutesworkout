@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Seven Minutes Workout</string>
     <string name="title_home">Home</string>
-    <string name="title_exercises">Exercises</string>
+    <string name="title_meditation">Meditation</string>
     <string name="title_notifications">Notifications</string>
 
     <string name="let_s_start_training">Let\'s start training !</string>
@@ -15,6 +15,7 @@
     <string name="next">Next</string>
     <string name="previous">Prev</string>
     <string name="confirm">Confirm</string>
+    <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="exit_workout">Exit Workout?</string>
     <string name="confirm_exit">Are you sure you want to exit ?</string>
@@ -23,5 +24,16 @@
     <string name="finish">Finish</string>
     <string name="you_did_it">You did it !</string>
     <string name="image_award">Image award</string>
+    <string name="on_off_music">On / Off Music</string>
+
+    <string name="credits">Music by Universe_Bella, Dana Music, Kevin Oh from Pixabay</string>
+    <string name="relax_and_breathe">Relax and Breathe</string>
+    <string name="meditation_completed">Meditation completed</string>
+    <string name="meditation_session_over">You have finished your meditation session.</string>
+
+    <plurals name="meditation_duration">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
 
 </resources>

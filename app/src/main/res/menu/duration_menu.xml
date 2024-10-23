@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/duration_1_minute"
+        android:title="1 minute" />
+    <item
+        android:id="@+id/duration_3_minutes"
+        android:title="3 minutes" />
+    <item
+        android:id="@+id/duration_5_minutes"
+        android:title="5 minutes" />
+    <item
+        android:id="@+id/duration_7_minutes"
+        android:title="7 minutes" />
+</menu>

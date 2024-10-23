@@ -3,7 +3,7 @@
     <!-- Couleur du texte quand le bouton est désactivé -->
     <item android:color="@android:color/transparent" android:state_enabled="false"/>
     <!-- Couleur du texte quand le bouton est pressé -->
-    <item android:color="@color/colorPressed" android:state_pressed="true"/>
+    <item android:color="@color/color_pressed" android:state_pressed="true"/>
     <!-- Couleur du texte par défaut quand le bouton est activé -->
     <item android:color="@color/blacklight" android:state_enabled="true"/>
 </selector>

@@ -16,6 +16,12 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_meditation"
+        android:name="fr.wesy.sevenminutesworkout.presentation.ui.meditation.MeditationFragment"
+        android:label="@string/title_meditation"
+        tools:layout="@layout/fragment_meditation" />
+
+    <fragment
         android:id="@+id/navigation_notifications"
         android:name="fr.wesy.sevenminutesworkout.presentation.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
