@@ -94,7 +94,7 @@ class MeditationViewModel @Inject constructor(
         }
     }
 
-    private fun stopMusic() {
+    fun stopMusic() {
         mediaPlayer?.stop()
         mediaPlayer?.release()
         mediaPlayer = null

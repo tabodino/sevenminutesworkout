@@ -2,7 +2,7 @@
     <string name="app_name">Seven Minutes Workout</string>
     <string name="title_home">Home</string>
     <string name="title_meditation">Meditation</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_information">Information</string>
 
     <string name="let_s_start_training">Let\'s start training !</string>
     <string name="rest_for_n_seconds">Rest for %1s seconds</string>
@@ -36,4 +36,55 @@
         <item quantity="other">%d minutes</item>
     </plurals>
 
+    <string name="disclaimer">
+        <b>" Medical Disclaimer:\n\n"</b>"The application Seven Minutes Workout does not constitute "
+        "medical advice. Before starting any workout program or following sports-related advice, "
+        "it is strongly recommended that you consult a doctor or a qualified healthcare "
+        "professional, especially if you have pre-existing medical conditions, injuries, or "
+        "physical limitations.\n\n"
+
+        <b>"Disclaimer of Liability:\n\n"</b>"The use of the Seven Minutes Workout application is "
+        "at your own risk. Under no circumstances can Seven Minutes Workout be held responsible "
+        "for any injuries, accidents, illnesses, or other damages that may result from the use of "
+        "this application.\n\n"
+
+        <b>"Injury Disclaimer:\n\n"</b>"The Seven Minutes Workout application is designed to "
+        "provide information and workout programs. However, it is your responsibility to ensure "
+        "that you are physically capable of following these programs. If you experience pain, "
+        "dizziness, or any other unusual symptoms during an exercise, stop immediately and "
+        "consult a doctor.\n\n"
+
+        <b>"Safety Advice:\n\n"</b>"Before starting any exercise, ensure that you have a safe "
+        "environment for practicing your physical activities.Respect your physical limits and "
+        "avoid overestimating your abilities. Self-diagnosis and self-treatment can be dangerous. "
+        "Stay hydrated regularly and take breaks when necessary.\n\n"
+
+        <b>"No Warranty:\n\n"</b>"The Seven Minutes Workout application is provided as is "
+        "without any warranties of any kind, express or implied, regarding the results you may "
+        "achieve through the use of the application.\n\n"
+
+        <b>"Proper Use:\n\n"</b>"The application should only be used by individuals in good "
+        "physical and mental health. If you have any doubts about your ability to follow the "
+        "workouts, consult a doctor before using the application.\n\n"
+
+        <b>"Privacy:\n\n"</b>"All personal data collected by the application is used in accordance "
+        "with our privacy policy, available in the app's settings or on our website. We are "
+        "committed to protecting your privacy and not sharing your information with unauthorized "
+        "third parties.\n\n"
+
+        <b>"Limitation of Liability:\n\n"</b>"Seven Minutes Workout developers disclaims all "
+        "liability for any misuse of the application, misinterpretation of instructions, or any "
+        "consequences arising from the improper use of the information provided.\n\n"
+
+        <b>"Changes to Terms:\n\n"</b>"These legal notices and terms may be modified at any time. "
+        "It is the user's responsibility to regularly check this section to stay informed of any "
+        "changes.\n\n"
+
+        <b>"Sources:\n\n"</b>"Medias come from the following sources:\n"
+        <i>"- https://fr.freepik.com/\n"</i>
+        <i>"- https://www.pexels.com/\n"</i>
+        <i>"- https://pixabay.com/\n"</i>
+        <i>"- Music from Universe_Bella\n"</i>
+        "\n\n"
+    </string>
 </resources>

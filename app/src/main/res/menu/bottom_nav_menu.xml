@@ -14,9 +14,9 @@
         android:title="@string/title_meditation" />
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:id="@+id/navigation_information"
+        android:icon="@drawable/ic_rounded_info_24dp"
         android:iconTint="@color/default_text_color"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_information" />
 
 </menu>

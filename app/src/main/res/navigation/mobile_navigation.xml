@@ -22,10 +22,10 @@
         tools:layout="@layout/fragment_meditation" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="fr.wesy.sevenminutesworkout.presentation.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_information"
+        android:name="fr.wesy.sevenminutesworkout.presentation.ui.information.InformationFragment"
+        android:label="@string/title_information"
+        tools:layout="@layout/fragment_information" />
 
     <fragment
         android:id="@+id/navigation_workout_detail"

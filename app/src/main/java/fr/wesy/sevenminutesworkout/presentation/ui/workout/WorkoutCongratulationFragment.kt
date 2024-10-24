@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dagger.hilt.android.AndroidEntryPoint
@@ -36,6 +37,10 @@ class WorkoutCongratulationFragment : Fragment() {
         binding.btnFinish.setOnClickListener {
             findNavController().navigate(R.id.navigation_home)
             onDestroyView()
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            findNavController().navigate(R.id.navigation_home)
         }
 
         (activity as MainActivity).hideBottomNavigationView()

@@ -131,6 +131,7 @@ class MeditationFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        meditationViewModel.stopMusic()
         _binding = null
     }
 }
