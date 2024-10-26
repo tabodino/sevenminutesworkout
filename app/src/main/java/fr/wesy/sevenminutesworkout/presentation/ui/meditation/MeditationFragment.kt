@@ -50,8 +50,8 @@ class MeditationFragment : Fragment() {
 
         binding.btnSelectDuration.text = getDurationText(DEFAULT_MINUTES_DURATION)
 
-        binding.switchMusic.setOnCheckedChangeListener { _, _ ->
-            meditationViewModel.toggleSoundMute()
+        binding.switchMusic.setOnCheckedChangeListener { _, isChecked ->
+            meditationViewModel.toggleSoundMute(isChecked)
         }
 
         binding.btnPlayPause.setOnClickListener {
@@ -101,6 +101,7 @@ class MeditationFragment : Fragment() {
     private fun updateMeditationDuration(durationInMinutes: Long) {
         val durationText = getDurationText(durationInMinutes)
         binding.btnSelectDuration.text = durationText
+        resetMeditation()
         startMeditation(durationInMinutes)
     }
 
@@ -129,9 +130,20 @@ class MeditationFragment : Fragment() {
         )
     }
 
+    private fun resetMeditation() {
+        meditationViewModel.resetPause()
+        meditationViewModel.stopMusic()
+        binding.btnPlayPause.setImageResource(R.drawable.ic_pause_48dp)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        meditationViewModel.stopMusic()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
-        meditationViewModel.stopMusic()
+        resetMeditation()
         _binding = null
     }
 }

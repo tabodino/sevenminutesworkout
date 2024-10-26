@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import fr.wesy.sevenminutesworkout.R
 import fr.wesy.sevenminutesworkout.domain.service.TimerManager
 import java.util.Locale
@@ -13,10 +14,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MeditationViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val timerManager: TimerManager
 ): ViewModel() {
 
     private val _isSoundMuted = MutableLiveData<Boolean>()
+
+    private val _isMusicPlaying = MutableLiveData<Boolean>()
 
     private val _timerText = MutableLiveData<String>()
     val timerText: LiveData<String> = _timerText
@@ -41,6 +45,7 @@ class MeditationViewModel @Inject constructor(
 
         if (playMusic) {
             startMusic(context)
+            _isMusicPlaying.value = true
         }
         startMeditationTimer()
     }
@@ -55,13 +60,18 @@ class MeditationViewModel @Inject constructor(
             stopMusic()
         })
     }
+
+    fun resetPause() {
+        _isPaused.value = false
+    }
+
     // We pause also music if it played
     fun togglePauseResumeMeditation() {
         // Toggle the pause/resume state
         _isPaused.value = _isPaused.value != true
         if (_isPaused.value == true) {
             timerManager.pauseTimer()
-            if (_isSoundMuted.value == false) {
+            if (_isSoundMuted.value == false && _isMusicPlaying.value == true) {
                 currentMusicPosition = mediaPlayer?.currentPosition ?: 0
                 mediaPlayer?.pause()
             }
@@ -80,8 +90,11 @@ class MeditationViewModel @Inject constructor(
         mediaPlayer?.start()
     }
 
-    fun toggleSoundMute() {
-        _isSoundMuted.value = _isSoundMuted.value != true
+    fun toggleSoundMute(isChecked: Boolean) {
+        _isSoundMuted.value = !isChecked
+        if (isChecked) {
+            startMusic(context)
+        }
         // We keep music in memory
         if (_isSoundMuted.value == true) {
             currentMusicPosition = mediaPlayer?.currentPosition ?: 0
@@ -95,6 +108,7 @@ class MeditationViewModel @Inject constructor(
     }
 
     fun stopMusic() {
+        _isMusicPlaying.value = false
         mediaPlayer?.stop()
         mediaPlayer?.release()
         mediaPlayer = null
