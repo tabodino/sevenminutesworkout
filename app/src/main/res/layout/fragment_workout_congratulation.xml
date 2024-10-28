@@ -55,7 +55,7 @@
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/blacklight"
+        android:backgroundTint="@color/buttonBackgroundColor"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/finish"
         android:textColor="@android:color/white"

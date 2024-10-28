@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:id="@+id/navigation_workouts"
+        android:icon="@drawable/ic_workout_24dp"
         android:iconTint="@color/default_text_color"
-        android:title="@string/title_home" />
+        android:title="@string/title_workouts" />
 
     <item
         android:id="@+id/navigation_meditation"

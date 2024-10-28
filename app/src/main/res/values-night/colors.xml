@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_text_color">@color/white</color>
+    <!-- Card View -->
+    <color name="cardBackgroundColor">#1E1E1E</color>
+
+    <color name="backgroundColor">#1E1E1E</color>
+
+    <color name="buttonBackgroundColor">@color/teal_700</color>
+</resources>

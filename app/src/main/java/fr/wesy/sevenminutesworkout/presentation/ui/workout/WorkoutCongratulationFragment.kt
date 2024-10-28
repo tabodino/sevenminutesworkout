@@ -35,15 +35,19 @@ class WorkoutCongratulationFragment : Fragment() {
         animationManager.startKonfettiAnimation(binding.konfettiView)
 
         binding.btnFinish.setOnClickListener {
-            findNavController().navigate(R.id.navigation_home)
+            navigateToWorkouts()
             onDestroyView()
         }
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            findNavController().navigate(R.id.navigation_home)
+            navigateToWorkouts()
         }
 
         (activity as MainActivity).hideBottomNavigationView()
+    }
+
+    private fun navigateToWorkouts() {
+        findNavController().navigate(R.id.navigation_workouts)
     }
 
     override fun onDestroyView() {

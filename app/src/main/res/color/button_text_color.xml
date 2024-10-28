@@ -5,5 +5,5 @@
     <!-- Couleur du texte quand le bouton est pressé -->
     <item android:color="@color/color_pressed" android:state_pressed="true"/>
     <!-- Couleur du texte par défaut quand le bouton est activé -->
-    <item android:color="@color/blacklight" android:state_enabled="true"/>
+    <item android:color="@color/default_text_color" android:state_enabled="true"/>
 </selector>

@@ -81,7 +81,7 @@
                     android:layout_height="match_parent"
                     app:cardElevation="16dp"
                     app:cardCornerRadius="0dp"
-                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardBackgroundColor="@color/cardBackgroundColor"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent">
@@ -126,7 +126,7 @@
                             android:layout_width="320dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:backgroundTint="@color/blacklight"
+                            android:backgroundTint="@color/buttonBackgroundColor"
                             android:fontFamily="@font/roboto_medium"
                             android:text="@string/start_training"
                             android:textColor="@android:color/white"

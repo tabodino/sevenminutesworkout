@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Seven Minutes Workout</string>
-    <string name="title_home">Home</string>
+    <string name="title_workouts">Workouts</string>
     <string name="title_meditation">Meditation</string>
     <string name="title_information">Information</string>
 

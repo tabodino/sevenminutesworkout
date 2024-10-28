@@ -32,4 +32,12 @@
     <color name="circle_blue4">#4DB6AC</color>
     <color name="circle_blue5">#26A69A</color>
 
+    <!-- Card View -->
+    <color name="cardBackgroundColor">@android:color/transparent</color>
+
+    <color name="backgroundColor">@color/white</color>
+
+    <color name="buttonBackgroundColor">@color/blacklight</color>
+
+
 </resources>

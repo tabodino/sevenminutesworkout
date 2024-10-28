@@ -117,7 +117,7 @@ class MeditationFragment : Fragment() {
             .setMessage(R.string.meditation_session_over)
             .setPositiveButton(R.string.ok) { dialog, _ ->
                 dialog.dismiss()
-                findNavController().navigate(R.id.navigation_home)
+                findNavController().navigate(R.id.navigation_workouts)
             }
             .show()
     }

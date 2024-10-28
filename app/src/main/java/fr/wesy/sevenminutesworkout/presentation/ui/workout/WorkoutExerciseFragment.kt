@@ -131,7 +131,7 @@ class WorkoutExerciseFragment : Fragment() {
         }
         binding.btnConfirm.setOnClickListener {
             alertDialog.dismiss()
-            findNavController().navigate(R.id.navigation_home)
+            findNavController().navigate(R.id.navigation_workouts)
             onDestroyView()
         }
 
