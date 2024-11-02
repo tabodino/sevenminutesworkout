@@ -59,7 +59,7 @@
             android:text="@string/cancel"
             android:layout_marginEnd="32dp"
             android:textColor="@color/button_text_color"
-            app:strokeColor="@color/buttonBackgroundColor"
+            app:strokeColor="@color/button_background_color"
             android:paddingHorizontal="24dp"
             android:layout_gravity="center" />
 
@@ -67,7 +67,7 @@
             android:id="@+id/btnConfirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/buttonBackgroundColor"
+            android:backgroundTint="@color/button_background_color"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/confirm"
             android:textColor="@android:color/white"

@@ -42,7 +42,8 @@ class WorkoutExerciseFragment : Fragment() {
 
         handleBackPressed()
 
-        (activity as MainActivity).hideBottomNavigationView()
+        (activity as MainActivity).setBottomNavVisibility(false)
+        (activity as MainActivity).setHamburgerButtonVisibility(false)
 
         setupObservers()
 
@@ -144,7 +145,8 @@ class WorkoutExerciseFragment : Fragment() {
 
         val navController = findNavController()
         if (navController.currentDestination?.id != R.id.navigation_congratulations) {
-            (activity as MainActivity).showBottomNavigationView()
+            (activity as MainActivity).setBottomNavVisibility(true)
+            (activity as MainActivity).setHamburgerButtonVisibility(true)
         }
     }
 }

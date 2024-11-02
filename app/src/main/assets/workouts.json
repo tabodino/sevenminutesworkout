@@ -9,37 +9,37 @@
          {
             "title":"Jumping jacks",
             "description":"Stand with feet together and arms at your sides. Jump while spreading legs to the sides and raising arms above the head. Return to starting position and repeat.",
-            "duration":10,
+            "duration":60,
             "imageUrl": "https://sevenminutesworkout.wesy.fr/images/jumping-jacks.webp"
          },
          {
             "title":"Push-ups",
             "description":"In plank position, hands shoulder-width apart. Lower your body towards the floor by bending elbows, then push back up to starting position.",
-            "duration":10,
+            "duration":60,
             "imageUrl": "https://sevenminutesworkout.wesy.fr/images/push-ups.webp"
          },
          {
             "title":"Squats",
             "description":"Stand with feet shoulder-width apart. Bend knees to lower your body as if sitting on a chair, then return to standing position.",
-            "duration":10,
+            "duration":60,
             "imageUrl": "https://sevenminutesworkout.wesy.fr/images/squats.webp"
          },
          {
             "title":"Plank",
             "description":"In plank position on forearms, keep body in a straight line from heels to head by engaging core muscles.",
-            "duration":10,
+            "duration":60,
             "imageUrl": "https://sevenminutesworkout.wesy.fr/images/plank.webp"
          },
          {
             "title":"Alternating Lunges",
             "description":"Stand, step one foot forward into a lunge, bending both knees. Return to standing and repeat on the other side.",
-            "duration":10,
+            "duration":60,
             "imageUrl": "https://sevenminutesworkout.wesy.fr/images/alternating-lunges.webp"
          },
          {
             "title":"Crunches",
             "description":"Lie on your back with knees bent and feet flat on the floor. Place hands behind your head. Contract your abs to lift your shoulders off the floor, then return to starting position.",
-            "duration":10,
+            "duration":60,
             "imageUrl": "https://sevenminutesworkout.wesy.fr/images/crunches.webp"
          }
       ]

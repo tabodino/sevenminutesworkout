@@ -2,9 +2,11 @@
 <resources>
     <color name="default_text_color">@color/white</color>
     <!-- Card View -->
-    <color name="cardBackgroundColor">#1E1E1E</color>
+    <color name="card_background_color">#1E1E1E</color>
 
-    <color name="backgroundColor">#1E1E1E</color>
+    <color name="background_color">#1E1E1E</color>
 
-    <color name="buttonBackgroundColor">@color/teal_700</color>
+    <color name="button_background_color">@color/teal_700</color>
+
+    <color name="inverse_mode_color">@color/white</color>
 </resources>

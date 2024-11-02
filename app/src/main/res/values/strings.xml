@@ -4,6 +4,8 @@
     <string name="title_meditation">Meditation</string>
     <string name="title_information">Information</string>
 
+    <string name="content_desc_splash">Splash background image</string>
+
     <string name="let_s_start_training">Let\'s start training !</string>
     <string name="rest_for_n_seconds">Rest for %1s seconds</string>
 
@@ -16,6 +18,7 @@
     <string name="previous">Prev</string>
     <string name="confirm">Confirm</string>
     <string name="ok">OK</string>
+    <string name="menu">Menu</string>
     <string name="cancel">Cancel</string>
     <string name="exit_workout">Exit Workout?</string>
     <string name="confirm_exit">Are you sure you want to exit ?</string>
@@ -25,6 +28,8 @@
     <string name="you_did_it">You did it !</string>
     <string name="image_award">Image award</string>
     <string name="on_off_music">On / Off Music</string>
+    <string name="minutes_nworkout">minutes \nworkout</string>
+    <string name="_7">7</string>
 
     <string name="credits">Music by Universe_Bella, Dana Music, Kevin Oh from Pixabay</string>
     <string name="relax_and_breathe">Relax and Breathe</string>

@@ -51,8 +51,8 @@ class WorkoutDetailFragment : Fragment() {
 
         handleBackPressed()
 
-        (activity as MainActivity).hideBottomNavigationView()
-
+        (activity as MainActivity).setBottomNavVisibility(false)
+        (activity as MainActivity).setHamburgerButtonVisibility(false)
     }
 
     override fun onDestroyView() {
@@ -61,7 +61,8 @@ class WorkoutDetailFragment : Fragment() {
 
         val navController = findNavController()
         if (navController.currentDestination?.id != R.id.navigation_workout_exercise) {
-            (activity as MainActivity).showBottomNavigationView()
+            (activity as MainActivity).setBottomNavVisibility(true)
+            (activity as MainActivity).setHamburgerButtonVisibility(true)
         }
     }
 

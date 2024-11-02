@@ -11,9 +11,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
+import fr.wesy.sevenminutesworkout.R
 import fr.wesy.sevenminutesworkout.databinding.FragmentWorkoutBinding
 import fr.wesy.sevenminutesworkout.presentation.adapter.WorkoutAdapter
-
 @AndroidEntryPoint
 class WorkoutFragment : Fragment() {
     private val workoutViewModel: WorkoutViewModel by viewModels()
@@ -36,7 +36,20 @@ class WorkoutFragment : Fragment() {
         workoutViewModel.loadWorkouts()
 
         recyclerView = binding.recyclerViewWorkouts
-        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        recyclerView.layoutManager = if (resources.getBoolean(R.bool.is_portrait_only)) {
+           LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        } else {
+           LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        }
+
+        binding.cardViewMeditation?.setOnClickListener {
+            findNavController().navigate(R.id.navigation_meditation)
+        }
+
+        binding.cardViewInformation?.setOnClickListener {
+            findNavController().navigate(R.id.navigation_information)
+        }
 
         workoutViewModel.workouts.observe(viewLifecycleOwner) { workouts ->
             workoutAdapter = WorkoutAdapter(workouts) { selectedWorkout ->

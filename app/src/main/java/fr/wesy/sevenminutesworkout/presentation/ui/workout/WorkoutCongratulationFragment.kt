@@ -43,7 +43,8 @@ class WorkoutCongratulationFragment : Fragment() {
             navigateToWorkouts()
         }
 
-        (activity as MainActivity).hideBottomNavigationView()
+        (activity as MainActivity).setBottomNavVisibility(false)
+        (activity as MainActivity).setHamburgerButtonVisibility(false)
     }
 
     private fun navigateToWorkouts() {
@@ -53,6 +54,7 @@ class WorkoutCongratulationFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        (activity as MainActivity).showBottomNavigationView()
+        (activity as MainActivity).setBottomNavVisibility(true)
+        (activity as MainActivity).setHamburgerButtonVisibility(true)
     }
 }

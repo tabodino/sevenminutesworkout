@@ -15,4 +15,13 @@
         <!-- Customize your theme here. -->
         <item name="android:textColor">@color/default_text_color</item>
     </style>
+
+    <style name="Theme.SevenMinutesWorkout.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.SevenMinutesWorkout.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.SevenMinutesWorkout.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
