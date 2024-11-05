@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import dagger.hilt.android.AndroidEntryPoint
 import fr.wesy.sevenminutesworkout.R
@@ -13,11 +14,13 @@ import fr.wesy.sevenminutesworkout.presentation.ui.MainActivity
 import fr.wesy.sevenminutesworkout.util.ColorUtil
 import fr.wesy.sevenminutesworkout.util.ImageLoader
 import androidx.navigation.fragment.findNavController
+import fr.wesy.sevenminutesworkout.presentation.ui.network.NetworkViewModel
 
 @AndroidEntryPoint
 class WorkoutDetailFragment : Fragment() {
 
     private val args: WorkoutDetailFragmentArgs by navArgs()
+    private val networkViewModel: NetworkViewModel by viewModels()
     private var _binding: FragmentWorkoutDetailBinding? = null
     private val binding get() = _binding!!
 
@@ -32,6 +35,12 @@ class WorkoutDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        networkViewModel.isConnected.observe(viewLifecycleOwner) { isConnected ->
+            if (!isConnected) {
+                (activity as MainActivity).showNoConnectionDialog()
+            }
+        }
 
         val selectedWorkout = args.selectedWorkout
 

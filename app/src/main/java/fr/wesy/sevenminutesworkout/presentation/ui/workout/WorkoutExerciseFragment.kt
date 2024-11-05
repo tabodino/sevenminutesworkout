@@ -15,6 +15,7 @@ import fr.wesy.sevenminutesworkout.databinding.FragmentWorkoutExerciseBinding
 import fr.wesy.sevenminutesworkout.databinding.CustomAlertDialogBinding
 import fr.wesy.sevenminutesworkout.domain.model.Workout
 import fr.wesy.sevenminutesworkout.presentation.ui.MainActivity
+import fr.wesy.sevenminutesworkout.presentation.ui.network.NetworkViewModel
 import fr.wesy.sevenminutesworkout.util.Constants.MILLIS_TIME
 import fr.wesy.sevenminutesworkout.util.Constants.REST_TIME
 import fr.wesy.sevenminutesworkout.util.ImageLoader
@@ -22,6 +23,7 @@ import fr.wesy.sevenminutesworkout.util.ImageLoader
 @AndroidEntryPoint
 class WorkoutExerciseFragment : Fragment() {
     private val workoutExerciseViewModel: WorkoutExerciseViewModel by viewModels()
+    private val networkViewModel: NetworkViewModel by viewModels()
     private val args: WorkoutExerciseFragmentArgs by navArgs()
     private var _binding: FragmentWorkoutExerciseBinding? = null
     private val binding get() = _binding!!
@@ -39,6 +41,12 @@ class WorkoutExerciseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        networkViewModel.isConnected.observe(viewLifecycleOwner) { isConnected ->
+            if (!isConnected) {
+                (activity as MainActivity).showNoConnectionDialog()
+            }
+        }
 
         handleBackPressed()
 
@@ -80,7 +88,11 @@ class WorkoutExerciseFragment : Fragment() {
         }
 
         workoutExerciseViewModel.exerciseImageUrl.observe(viewLifecycleOwner) { imageUrl ->
-            ImageLoader.loadUrlImage(binding.ivWorkoutImage, imageUrl)
+            ImageLoader.loadUrlImage(
+                binding.ivWorkoutImage,
+                imageUrl,
+                R.drawable.no_image_placeholder
+            )
         }
 
         workoutExerciseViewModel.currentExerciseIndex.observe(viewLifecycleOwner) { index ->

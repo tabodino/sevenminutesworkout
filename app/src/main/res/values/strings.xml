@@ -36,10 +36,15 @@
     <string name="meditation_completed">Meditation completed</string>
     <string name="meditation_session_over">You have finished your meditation session.</string>
 
+    <string name="no_connection_title">No Internet Connection</string>
+    <string name="no_connection_message">Please check your internet connection and try again.</string>
+    <string name="press_twice_to_exit">Press back again to exit</string>
+
     <plurals name="meditation_duration">
         <item quantity="one">%d minute</item>
         <item quantity="other">%d minutes</item>
     </plurals>
+
 
     <string name="disclaimer">
         <b>" Medical Disclaimer:\n\n"</b>"The application Seven Minutes Workout does not constitute "

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -14,13 +15,20 @@ import dagger.hilt.android.AndroidEntryPoint
 import fr.wesy.sevenminutesworkout.R
 import fr.wesy.sevenminutesworkout.databinding.FragmentWorkoutBinding
 import fr.wesy.sevenminutesworkout.presentation.adapter.WorkoutAdapter
+import fr.wesy.sevenminutesworkout.presentation.ui.MainActivity
+import fr.wesy.sevenminutesworkout.presentation.ui.network.NetworkViewModel
+
 @AndroidEntryPoint
 class WorkoutFragment : Fragment() {
     private val workoutViewModel: WorkoutViewModel by viewModels()
+    private val networkViewModel: NetworkViewModel by viewModels()
+
     private var _binding: FragmentWorkoutBinding? = null
     private val binding get() = _binding!!
     private lateinit var recyclerView: RecyclerView
     private lateinit var workoutAdapter: WorkoutAdapter
+    private var pressedTime: Long = 0L
+    private val backPressThreshold: Long = 2000L
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +41,13 @@ class WorkoutFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        networkViewModel.isConnected.observe(viewLifecycleOwner) { isConnected ->
+            if (!isConnected) {
+                (activity as MainActivity).showNoConnectionDialog()
+            }
+        }
+
         workoutViewModel.loadWorkouts()
 
         recyclerView = binding.recyclerViewWorkouts
@@ -61,7 +76,12 @@ class WorkoutFragment : Fragment() {
         }
 
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            // Do nothing on back pressed
+            if (pressedTime + backPressThreshold > System.currentTimeMillis()) {
+                requireActivity().finish()
+            } else {
+                Toast.makeText(context, R.string.press_twice_to_exit, Toast.LENGTH_SHORT).show()
+            }
+            pressedTime = System.currentTimeMillis()
         }
     }
 

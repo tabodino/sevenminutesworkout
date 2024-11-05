@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -17,7 +18,9 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import fr.wesy.sevenminutesworkout.R
+import fr.wesy.sevenminutesworkout.data.NetworkStatusObserver
 import fr.wesy.sevenminutesworkout.databinding.ActivityMainBinding
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -26,6 +29,9 @@ class MainActivity : AppCompatActivity() {
     private var navView: BottomNavigationView? = null
     private var drawerLayout: DrawerLayout? = null
     private lateinit var navController: NavController
+
+    @Inject
+    lateinit var networkStatusObserver: NetworkStatusObserver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -66,6 +72,17 @@ class MainActivity : AppCompatActivity() {
         setupNavigationView()
 
         handleDrawerBackPressed()
+    }
+
+    fun showNoConnectionDialog() {
+        AlertDialog.Builder(this)
+            .setTitle(R.string.no_connection_title)
+            .setMessage(R.string.no_connection_message)
+            .setPositiveButton(R.string.ok) { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setNegativeButton(R.string.cancel) { dialog, _ -> dialog.dismiss() }
+            .show()
     }
 
     private fun setupNavigationView() {
