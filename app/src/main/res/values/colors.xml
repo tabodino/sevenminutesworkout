@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -16,7 +14,6 @@
     <color name="overlay">#90000000</color>
     <color name="light_gray">#747985</color>
     <color name="blue">#7596C9</color>
-    <color name="purple">#6170C1</color>
     <color name="dark_gray">#333333</color>
     <color name="medium_gray">#4d4d4d</color>
 
@@ -36,8 +33,6 @@
     <color name="card_background_color">@android:color/transparent</color>
 
     <color name="background_color">@color/white</color>
-
     <color name="button_background_color">@color/blacklight</color>
-
     <color name="inverse_mode_color">@color/black</color>
 </resources>

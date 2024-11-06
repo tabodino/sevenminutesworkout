@@ -84,6 +84,7 @@ local.properties
 .idea/codeStyles/
 
 # Ignore generated binding files
+/app/release/
 **/build/generated/
 /build/intermediates/
 /build/dependency-cache/
