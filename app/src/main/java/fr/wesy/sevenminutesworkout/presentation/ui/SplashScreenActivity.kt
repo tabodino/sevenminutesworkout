@@ -7,6 +7,8 @@ import android.os.Handler
 import android.os.Looper
 import android.view.animation.AlphaAnimation
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+
 import fr.wesy.sevenminutesworkout.databinding.ActivitySplashScreenBinding
 
 @SuppressLint("CustomSplashScreen")
@@ -15,6 +17,8 @@ class SplashScreenActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashScreenBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        installSplashScreen()
+
         super.onCreate(savedInstanceState)
 
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)

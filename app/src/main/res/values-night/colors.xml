@@ -6,7 +6,7 @@
 
     <color name="background_color">#1E1E1E</color>
 
-    <color name="button_background_color">@color/teal_700</color>
+    <color name="button_background_color">#036C5F</color>
 
     <color name="inverse_mode_color">@color/white</color>
 </resources>

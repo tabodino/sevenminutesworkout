@@ -6,6 +6,12 @@
 ```markdown
 # Changelog
 
+## [1.0.1] - 2024-11-08
+### Fixed
+- Size back arrow tactile target zone
+- Low contrast ratio on dark mode
+- Accessibilty content description label
+- Minify problem with Gson typeToken and Proguard
 
 ## [1.0.0] - 2024-11-05
 ### Added

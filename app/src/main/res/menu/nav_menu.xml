@@ -17,6 +17,7 @@
         android:id="@+id/navigation_information"
         android:icon="@drawable/ic_rounded_info_24dp"
         android:iconTint="@color/default_text_color"
+        android:contentDescription="@string/content_desc_info"
         android:title="@string/title_information" />
 
 </menu>

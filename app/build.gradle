@@ -17,13 +17,16 @@ android {
         applicationId "fr.wesy.sevenminutesworkout"
         minSdk 24
         targetSdk 34
-        versionCode 4
+        versionCode 7
         versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -55,6 +58,9 @@ dependencies {
     // Navigation
     implementation libs.androidx.navigation.fragment.ktx
     implementation libs.androidx.navigation.ui.ktx
+
+    // SplashScreen
+    implementation libs.androidx.core.splashscreen
 
     // Gson
     implementation libs.gson

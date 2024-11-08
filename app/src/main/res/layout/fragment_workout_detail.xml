@@ -32,9 +32,10 @@
 
                 <ImageView
                     android:id="@+id/ivBackArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_margin="16dp"
+                    android:padding="12dp"
                     android:contentDescription="@string/back"
                     android:src="@drawable/ic_back_arrow_24dp"
                     app:layout_constraintStart_toStartOf="parent"
