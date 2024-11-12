@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -49,6 +50,8 @@ class WorkoutExerciseFragment : Fragment() {
         }
 
         handleBackPressed()
+
+        requireActivity().window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         (activity as MainActivity).setBottomNavVisibility(false)
         (activity as MainActivity).setHamburgerButtonVisibility(false)
@@ -160,5 +163,6 @@ class WorkoutExerciseFragment : Fragment() {
             (activity as MainActivity).setBottomNavVisibility(true)
             (activity as MainActivity).setHamburgerButtonVisibility(true)
         }
+        requireActivity().window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
     }
 }

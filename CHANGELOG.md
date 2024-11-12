@@ -6,6 +6,10 @@
 ```markdown
 # Changelog
 
+## [1.0.2] - 2024-11-12
+### Fixed
+- Keep screen active during exercises
+
 ## [1.0.1] - 2024-11-08
 ### Fixed
 - Size back arrow tactile target zone
